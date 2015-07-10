@@ -1,23 +1,9 @@
-package ifCondition;
+package condition;
 
 import java.util.Scanner;
 
-/*
- *  @ Date : 2015.07.09
- *  @ Author : me
- *  @ Story : If-else 예제
- *  	프로그램을 하나 개발해야 합니다.
- *  	오더는 
- *  	학생	국어	영어	수학	총점	평균	합격여부
- *  	---------------------------------------------
- *  (홍길동) (90) (90) (90) (270) (90) (장학생)
- *  
- *  평균이 90점이상이면 장학생 
- *  평균이 70점이상 -90점미만이면 합격
- *  평균이 70점 미만이면 불합격 
- * */
-public class CalcAvgMain {
-	public static void main(String[] args) {
+public class SwitchAvg {
+	public void calc() {
 		//선언부
 		Scanner scanner = new Scanner(System.in);
 		int kor=0, eng=0, math=0, total=0, avg=0;
@@ -58,16 +44,21 @@ public class CalcAvgMain {
 
 		}*/
 		
-	
+		// 아래 부분을  switch -case 로 전환
 		
-		if (avg>=90) {
-			a = "장학생";
-		} else if(avg>=70 && avg<90){
-			a = "합격";
-		}else{
-			a = "불합격";
+		//if (avg>=90) {
+		//	a = "장학생";
+		//} else if(avg>=70 && avg<90){
+		//	a = "합격";
+		//}else{
+		//	a = "불합격";
+		//}
+		switch (avg/10) {
+		case 10:case 9: a = "장학생입니다."; break;
+		case 8:case 7: a = "합격입니다."; break;
+		
+		default: a = "불합격입니다."; break;
 		}
-		
 		
 		//출력부
 		System.out.println("학생	국어	영어	수학	총점	평균	합격여부");
@@ -75,12 +66,10 @@ public class CalcAvgMain {
 		System.out.println(stu+"\t"+kor+"\t"+eng+"\t"+math+"\t"+total+"\t"+avg+"\t"+a);
 		
 	
-	}
-		
-		 
-		
-			
-		
-	}
 
 
+
+
+		
+	}
+}

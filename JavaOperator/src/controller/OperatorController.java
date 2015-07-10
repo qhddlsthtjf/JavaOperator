@@ -1,7 +1,9 @@
 package controller;
 
-import ifCondition.ArithmeticCalc;
-import ifCondition.CalcAvg;
+import condition.ArithmeticCalc;
+import condition.CalcAvg;
+import condition.ManOrWomen;
+import condition.SwitchAvg;
 
 
 public class OperatorController {
@@ -11,6 +13,12 @@ public class OperatorController {
 		//avg.calcAvg();
 		//2015.07.09 사칙연산 계산기
 		ArithmeticCalc calc = new ArithmeticCalc();
-		calc.calc();
+		//calc.calc();
+		//2015.07.10 스위치문 평균 성적 계산기
+		SwitchAvg switchavg = new SwitchAvg();
+		//switchavg.calc();
+		//2015.07.10 스위치문 성별판단
+		ManOrWomen manOrWomen = new ManOrWomen();
+		manOrWomen.ssn(); //ssn()은 원 클래스의 메소드 이름이다.
 	}
 }
